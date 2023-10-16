@@ -17,10 +17,10 @@
     .title {
         @apply text-titleColor;
         @apply font-bold;
-        @apply text-6xl;
+        @apply text-4xl md:text-6xl;
     }
     .sectionTitle {
         @apply text-primary;
-        @apply text-3xl;
+        @apply text-lg md:text-2xl;
     }
 }
