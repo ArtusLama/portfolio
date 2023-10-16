@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    html {
+        @apply bg-backgroundColor;
+        @apply overflow-x-hidden;
+    }
+    div#__nuxt {
+        @apply min-h-[100vh];
+        @apply w-screen;
+    }
+}
+@layer components {
+    .title {
+        @apply text-titleColor;
+        @apply font-bold;
+        @apply text-6xl;
+    }
+    .sectionTitle {
+        @apply text-primary;
+        @apply text-3xl;
+    }
+}
