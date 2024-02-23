@@ -1,7 +1,7 @@
 <template>
-    <div class="sticky top-0">
-        <div class="flex justify-between items-center px-8 md:px-24 py-2 md:py-6 backdrop-blur md:backdrop-blur-lg relative z-20"
-            :class="isMobileMenuOpen ? 'bg-backgroundColor' : 'bg-backgroundColor/[0.8]'">
+    <div class="sticky top-0 z-50">
+        <div class="flex justify-between items-center px-12 md:px-32 py-2 md:py-6 backdrop-blur md:backdrop-blur-lg relative z-20"
+            :class="isMobileMenuOpen ? 'bg-backgroundColor' : 'bg-backgroundColor/[0.6]'">
             <div>
                 <p class="text-primary font-bold text-2xl">{{ "< Artus >" }}</p>
             </div>
@@ -9,22 +9,22 @@
             <div v-if="currentScreenWidth >= maxMobileWidth" class="flex gap-10 text-textColor font-light text-lg child:cursor-pointer">
                 <p @click="scrollTo('home')" class="hover:text-primary">Home</p>
                 <p @click="scrollTo('about')" class="hover:text-primary">About</p>
-                <p @click="scrollTo('about2')" class="hover:text-primary">Projects</p>
+                <p @click="scrollTo('projects')" class="hover:text-primary">Projects</p>
             </div>
             <div v-else class="pt-2 cursor-pointer" @click="isMobileMenuOpen = !isMobileMenuOpen">
-                <span v-if="!isMobileMenuOpen" class="i-heroicons-bars-3 text-5xl bg-borderColor text-white"></span>
-                <span v-else class="i-heroicons-x-mark text-5xl bg-borderColor text-white"></span>
+                <span v-if="!isMobileMenuOpen" class="i-heroicons-bars-3 text-5xl bg-primary"></span>
+                <span v-else class="i-heroicons-x-mark text-5xl bg-primary"></span>
             </div>
 
 
         </div>
 
 
-        <div v-if="isMobileMenuOpen" class="sticky top-0 bg-backgroundLightColor z-10">
+        <div v-if="isMobileMenuOpen" class="absolute top-[69px] left-0 right-0 bg-backgroundLightColor select-none">
             <div class="w-full h-full flex flex-col items-center justify-center text-white relative py-10 px-[15vw]">
                 <p @click="scrollTo('home')" class="w-full text-center h-full py-5 cursor-pointer hover:text-primary">Home</p>
                 <p @click="scrollTo('about')" class="w-full text-center h-full py-5 cursor-pointer hover:text-primary">About</p>
-                <p @click="scrollTo('about2')" class="w-full text-center h-full py-5 cursor-pointer hover:text-primary">Projects</p>
+                <p @click="scrollTo('projects')" class="w-full text-center h-full py-5 cursor-pointer hover:text-primary">Projects</p>
             </div>
         </div>
 

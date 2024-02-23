@@ -1,6 +1,6 @@
 <template>
-    <p class="sectionTitle" :class="boldSectionName ? 'font-bold' : 'font-thin'">{{ sectionName }}</p>
-    <p class="title mt-2">{{ title }}</p>
+    <p class="sectionTitle tracking-wider" :class="boldSectionName ? 'font-semibold' : 'font-normal'">{{ sectionName }}</p>
+    <p :class="boldSectionName ? 'title' : 'titleSmaller'">{{ title }}</p>
 </template>
 <script lang="ts" setup>
 

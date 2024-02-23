@@ -7,8 +7,9 @@ export default {
                 primary: "#26A4FF",
                 titleColor: "#CFD8F2",
                 textColor: "#98A2BD",
+                iconColor: "#98A2BD",
                 borderColor: "#3C485B",
-                backgroundLightColor: "#0e131a",
+                backgroundLightColor: "#151a21",
                 backgroundColor: "#0A0E14"
             }
         }

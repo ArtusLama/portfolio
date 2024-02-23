@@ -12,6 +12,26 @@
         @apply min-h-[100vh];
         @apply w-screen;
     }
+    a {
+        @apply text-primary;
+    }
+    a:link, a:visited {
+        @apply text-primary;
+        @apply underline;
+    }
+    button {
+        @apply border border-textColor;
+        @apply rounded;
+        @apply px-[20px] py-[7px];
+        @apply text-textColor;
+        @apply shadow-md shadow-textColor/25;
+    }
+    button.primaryButton {
+        @apply bg-primary;
+        @apply text-white;
+        @apply border-none;
+        @apply shadow-md shadow-primary/40;
+    }
 }
 @layer components {
     .title {
@@ -19,8 +39,33 @@
         @apply font-bold;
         @apply text-4xl md:text-6xl;
     }
+    .titleSmaller {
+        @apply text-titleColor;
+        @apply font-bold;
+        @apply text-4xl md:text-4xl;
+    }
     .sectionTitle {
         @apply text-primary;
         @apply text-lg md:text-2xl;
+    }
+
+
+    .figmaIconBorder {
+        @apply !border-[#FF7262];
+    }
+    .javaIconBorder {
+        @apply !border-[#489ACF];
+    }
+    .pythonIconBorder {
+        @apply !border-[#36ABFF];
+    }
+    .nuxtIconBorder {
+        @apply !border-[#00D680];
+    }
+    .vueIconBorder {
+        @apply !border-[#33B37C];
+    }
+    .typescriptIconBorder {
+        @apply !border-[#2F74C1];
     }
 }

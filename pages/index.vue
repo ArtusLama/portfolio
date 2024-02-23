@@ -1,10 +1,9 @@
 <template>
-    <div class="flex flex-col justify-center px-12 md:px-32 child:py-40">
-        <p class="subTitle">IMPORTANT</p>
-        <p class="text-6xl title">This page is still in progress!</p>
-        <!--<SectionHeader id="home" class="w-full min-h-[100vh]"/>
+    <div class="flex flex-col justify-center px-12 md:px-32 child:md:pt-40 child:pt-40 pb-20">
+        <SectionHeader id="home" class="md:w-[80vw] w-full min-h-[25rem] !pt-20"/>
         <SectionAbout id="about" class="md:w-[50vw]"/>
-        <SectionAbout id="about2" class="md:w-[50vw]"/>-->
+        <SectionProjects id="projects" class="md:w-[85vw]"/>
+        <SectionContact id="contact" class="md:w-[50vw]"/>
     </div>
 </template>
 <script lang="ts" setup>
