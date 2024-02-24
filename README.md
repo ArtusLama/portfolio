@@ -1,4 +1,4 @@
-# Nuxt 3 Minimal Starter
+# My Portfolio
 
 Link to Page: https://artuslama.github.io/
 
