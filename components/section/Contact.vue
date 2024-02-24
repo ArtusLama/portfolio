@@ -5,8 +5,9 @@
             title="Let's get in touch"
         />
         <p class="mt-4 text-textColor">
-            So what should I say? I’m a passionate Developer and Designer. Programming is what
-            connects me with people and where I learn every day something new.
+            I would enjoy to get in touch with you. If you have any questions about me or my projetcs feel free to message me.
+            Also if you want to hire me for a project or something similar just text me :D
+
         </p>
 
         <form @mouseenter="isInContactSection = true" @mouseleave="isInContactSection = false"

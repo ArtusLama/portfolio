@@ -68,4 +68,7 @@
     .typescriptIconBorder {
         @apply !border-[#2F74C1];
     }
+    .tailwindcssIconBorder {
+        @apply !border-[#38bdf8];
+    }
 }

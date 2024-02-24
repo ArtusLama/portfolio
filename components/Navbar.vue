@@ -1,7 +1,7 @@
 <template>
     <div class="sticky top-0 z-50">
         <div class="flex justify-between items-center px-12 md:px-32 py-2 md:py-6 backdrop-blur md:backdrop-blur-lg relative z-20"
-            :class="isMobileMenuOpen ? 'bg-backgroundColor' : 'bg-backgroundColor/[0.6]'">
+            :class="isMobileMenuOpen ? 'bg-backgroundColor' : 'bg-backgroundColor/[0.7]'">
             <div>
                 <p class="text-primary font-bold text-2xl">{{ "< Artus >" }}</p>
             </div>
