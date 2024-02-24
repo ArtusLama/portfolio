@@ -16,7 +16,7 @@
 
         </div>
         <div class="grid items-center">
-            <p class="text-4xl text-textColor">lol</p>
+            <p class="text-textColor md:text-[15rem] -mt-10 text-[10rem] md:ml-0 -ml-20">🫡</p><!--TODO: change xD looks on ios weird-->
         </div>
     </div>
 </template>

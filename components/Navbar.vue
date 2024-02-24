@@ -10,6 +10,7 @@
                 <p @click="scrollTo('home')" class="hover:text-primary">Home</p>
                 <p @click="scrollTo('about')" class="hover:text-primary">About</p>
                 <p @click="scrollTo('projects')" class="hover:text-primary">Projects</p>
+                <p @click="scrollTo('contact')" class="hover:text-primary">Contact</p>
             </div>
             <div v-else class="pt-2 cursor-pointer" @click="isMobileMenuOpen = !isMobileMenuOpen">
                 <span v-if="!isMobileMenuOpen" class="i-heroicons-bars-3 text-5xl bg-primary"></span>

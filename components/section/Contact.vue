@@ -13,18 +13,26 @@
                  @submit.prevent="sendMessage" class="mt-10 text-white flex flex-col gap-4 justify-between sm:w-[50%] sm:pr-0 pr-10 md:max-w-[20rem]">
             <div>
                 <label class="block text-textColor font-semibold ml-3" for="fullname">Your Name:</label>
-                <input v-model="nameInput" :required="isInContactSection" type="text" id="fullname" class="w-full mt-1 ml-2 rounded-md bg-backgroundLightColor 
-                    outline-1 outline-none focus:outline-primary
-                    invalid:!outline-red-400 invalid:text-red-100
-                    py-1 pl-2">
+
+                <div class="relative">
+                    <span class="i-heroicons-user absolute text-textColor top-[55%] translate-y-[-50%] left-4"></span>
+                    <input v-model="nameInput" :required="isInContactSection" type="text" id="fullname" class="w-full mt-1 ml-2 rounded-md bg-backgroundLightColor 
+                        outline-1 outline-none focus:outline-primary
+                        invalid:!outline-red-400 invalid:text-red-100
+                        py-1 pl-7">
+                </div>
             </div>
          
             <div>
                 <label class="block text-textColor font-semibold ml-3" for="email">Your E-Mail:</label>
-                <input v-model="mailInput" :required="isInContactSection" type="email" id="email" class="w-full mt-1 ml-2 rounded-md bg-backgroundLightColor 
-                    outline-1 outline-none focus:outline-primary
-                    invalid:!outline-red-400 invalid:text-red-100
-                    py-1 pl-2">
+                
+                <div class="relative">
+                    <span class="i-heroicons-envelope absolute text-textColor top-[55%] translate-y-[-50%] left-4"></span>
+                    <input v-model="mailInput" :required="isInContactSection" type="email" id="email" class="w-full mt-1 ml-2 rounded-md bg-backgroundLightColor 
+                        outline-1 outline-none focus:outline-primary
+                        invalid:!outline-red-400 invalid:text-red-100
+                        py-1 pl-7">
+                </div>
             </div>
 
             <div>
@@ -34,7 +42,7 @@
                     py-1 pl-2"></textarea>
             </div>
 
-            <button type="submit" class="ml-4 hover:brightness-[0.85] primaryButton transition-all">Send Message</button>
+            <button type="submit" class="ml-4 hover:brightness-[0.85] primaryButton transition-all inline-flex items-center justify-center gap-4"><p>Send Message</p><span class="i-heroicons-paper-airplane mt-1"></span></button>
             <p v-if="messageSent" class="ml-4 -mt-3 text-textColor tracking-tighter text-center">Thank you for your message!</p>
             
         </form>
