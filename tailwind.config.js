@@ -16,7 +16,7 @@ export default {
     },
     plugins: [
         iconsPlugin({
-            collections: getIconCollections(["heroicons"]),
+            collections: getIconCollections(["heroicons", "bxl"]),
         }),
         function ({ addVariant }) {
             addVariant("child", "& > *"); // https://stackoverflow.com/questions/67119992/how-to-access-all-the-direct-children-of-a-div-in-tailwindcss

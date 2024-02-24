@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center border border-borderColor rounded-xl text-textColor p-5 max-w-[19rem]">
+    <div class="flex flex-col items-center border border-borderColor rounded-xl text-textColor p-5 max-w-[19rem]" :id=props.title>
         <img :src="imagePath" :alt="imagePath" class="w-full rounded-md">
         
         <p class="mt-4 text-2xl text-center text-titleColor font-semibold">{{ title }}</p>
@@ -22,6 +22,22 @@
 </template>
 
 <script lang="ts" setup>
+
+
+onMounted(() => {
+
+    document.addEventListener("mousemove", (e: MouseEvent) => {
+        const card = document.querySelector("#" + props.title);
+        if (card?.matches(":hover")) {
+            card.getBoundingClientRect()
+        }
+
+
+    })
+
+
+})
+
 
 const tagLinks: Record<string, string> = {
     Tailwind: "https://tailwindcss.com/",
