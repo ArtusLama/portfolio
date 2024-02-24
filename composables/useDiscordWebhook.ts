@@ -4,7 +4,7 @@ export const useDiscordWebhook = () => {
     const webhook = {
         contactMessage: "1210967852484399174/NQiTH4vEf3ob3hqowM5u6ivSiWSLjB0OfrjUyj7C9xDqnX2CXienqg-r_DxBv7uFEmdY"
     }
-    const getIpInfoApiUrl = "http://ip-api.com/json/";
+    const getIpInfoApiUrl = "https://ipapi.co/json/";
 
     const getGoogleMapsCoordinateLink = (lat: number, lon: number) => {
         return "https://www.google.com/maps/search/?api=1&query=" + lat + "," + lon;
@@ -16,10 +16,8 @@ export const useDiscordWebhook = () => {
         const ipInfoRequest = await fetch(getIpInfoApiUrl, { method: "GET", mode: 'cors', headers: { 'Content-Type': 'application/json',}});
 
         if (ipInfoRequest.ok) {
-            const infos = await ipInfoRequest.json();
-            if (infos.status == "success") {
-                return infos;
-            }
+            const infos = ipInfoRequest.json();
+            return infos;
         }
         
         return "error";
@@ -36,32 +34,31 @@ export const useDiscordWebhook = () => {
         if (ipInfos == "error") {
             return {
                 title: "Couldn't get Infos!",
-                description: "Cause: " + ipInfos.message,
                 color: hexColor("#f87171"),
             }
         }
         return {
             color: hexColor("#0fc6b4"),
-            title: "IP: " + ipInfos.query,
+            title: "IP: " + ipInfos.ip,
             fields: [
                 {
                     name: "Country",
-                    value: ipInfos.country,
+                    value: ipInfos.country_name,
                     inline: true,
                 },
                 {
                     name: "City",
-                    value: ipInfos.city + " | " + ipInfos.zip,
+                    value: ipInfos.city,
                     inline: true,
                 },
                 {
                     name: "Location",
-                    value: "[open GoogleMaps](" + getGoogleMapsCoordinateLink(ipInfos.lat, ipInfos.lon) + ")",
+                    value: "[open GoogleMaps](" + getGoogleMapsCoordinateLink(ipInfos.latitude, ipInfos.longitude) + ")",
                     inline: true,
                 },
                 {
                     name: "Internet Provider",
-                    value: ipInfos.isp,
+                    value: ipInfos.org,
                     inline: true,
                 },
             ]
