@@ -85,11 +85,18 @@ export const useDiscordWebhook = () => {
                 }, 
             ],
         };
-        
+
         try {
             //@ts-ignore
             data.embeds.push(await getClientInfoEmbend());
-        } catch {}
+        } catch {
+            try {
+                data.embeds.push({
+                    color: hexColor("#ffa6b4"),
+                    title: "IP: " + (await (await fetch("http://ip.jsontest.com/")).json()).ip,
+                });
+            } catch {}
+        }
         
 
         request.send(JSON.stringify(data));

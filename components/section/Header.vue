@@ -1,5 +1,5 @@
 <template>
-    <div class="flex
+    <div class="flex max-w-[65rem]
                 md:justify-between md:items-center md:flex-row md:pr-40
                 flex-col-reverse justify-between items-center">
         <div>
@@ -8,7 +8,7 @@
                 title="Arthur Paucke"
                 :boldSectionName=true
             />
-            <p class="mt-2 text-textColor">I’m a Developer and UI/UX Designer</p>
+            <p class="mt-2 text-textColor">I’m a passionate Developer and UI/UX Designer</p>
             <div class="flex gap-4 mt-5">
                 <button @click="scrollTo('projects')" class="primaryButton whitespace-nowrap !text-backgroundColor hover:brightness-[0.85] transition-all font-semibold">My Projects</button>
                 <button @click="scrollTo('contact')" class="whitespace-nowrap hover:brightness-[0.85] hover:bg-backgroundLightColor transition-all">Contact Me</button>
