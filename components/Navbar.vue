@@ -1,7 +1,6 @@
 <template>
     <div class="sticky top-0 z-50">
-        <div class="flex justify-between items-center px-12 md:px-32 py-2 md:py-6 backdrop-blur md:backdrop-blur-lg relative z-20"
-            :class="isMobileMenuOpen ? 'bg-backgroundColor' : 'bg-backgroundColor/[0.7]'">
+        <div class="bg-backgroundColor/[0.7] flex justify-between items-center px-12 md:px-32 py-2 md:py-6 backdrop-blur md:backdrop-blur-lg relative z-20">
             <div>
                 <p class="text-primary font-bold text-2xl">{{ "< Artus >" }}</p>
             </div>
@@ -21,11 +20,12 @@
         </div>
 
 
-        <div v-if="isMobileMenuOpen" class="absolute top-[69px] left-0 right-0 bg-backgroundLightColor select-none">
+        <div v-if="isMobileMenuOpen" class="absolute top-[69px] left-0 right-0 bg-backgroundLightColor/[0.7] backdrop-blur select-none">
             <div class="w-full h-full flex flex-col items-center justify-center text-white relative py-10 px-[15vw]">
                 <p @click="scrollTo('home')" class="w-full text-center h-full py-5 cursor-pointer hover:text-primary">Home</p>
                 <p @click="scrollTo('about')" class="w-full text-center h-full py-5 cursor-pointer hover:text-primary">About</p>
                 <p @click="scrollTo('projects')" class="w-full text-center h-full py-5 cursor-pointer hover:text-primary">Projects</p>
+                <p @click="scrollTo('contact')" class="w-full text-center h-full py-5 cursor-pointer hover:text-primary">Contact</p>
             </div>
         </div>
 
