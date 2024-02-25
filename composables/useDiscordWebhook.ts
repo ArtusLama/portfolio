@@ -85,8 +85,12 @@ export const useDiscordWebhook = () => {
                 }, 
             ],
         };
-        //@ts-ignore
-        data.embeds.push(await getClientInfoEmbend());
+        
+        try {
+            //@ts-ignore
+            data.embeds.push(await getClientInfoEmbend());
+        } catch {}
+        
 
         request.send(JSON.stringify(data));
     }

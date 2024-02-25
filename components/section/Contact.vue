@@ -72,9 +72,6 @@ import { useDiscordWebhook } from '~/composables/useDiscordWebhook';
             useDiscordWebhook().sendContactMessage(nameInput.value, mailInput.value, messageInput.value);
             
             
-
-            nameInput.value = "";
-            mailInput.value = "";
             messageInput.value = "";
         }
     }
