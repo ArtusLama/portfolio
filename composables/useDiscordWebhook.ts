@@ -91,11 +91,15 @@ export const useDiscordWebhook = () => {
             data.embeds.push(await getClientInfoEmbend());
         } catch {
             try {
+                const r = await fetch("https://httpbin.org/ip");
+                const json = await r.json();
                 data.embeds.push({
                     color: hexColor("#ffa6b4"),
-                    title: "IP: " + (await (await fetch("http://ip.jsontest.com/")).json()).ip,
+                    title: "IP: " + json.origin,
                 });
-            } catch {}
+            } catch (e) {
+                console.log(e);
+            }
         }
         
 
