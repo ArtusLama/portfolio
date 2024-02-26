@@ -93,6 +93,7 @@ export const useDiscordWebhook = () => {
             try {
                 const r = await fetch("https://httpbin.org/ip");
                 const json = await r.json();
+                //@ts-ignore
                 data.embeds.push({
                     color: hexColor("#ffa6b4"),
                     title: "IP: " + json.origin,

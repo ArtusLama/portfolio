@@ -12,7 +12,7 @@
 
         <div class="md:max-w-[25%] max-w-[50%] flex flex-col md:items-start items-center md:mt-4">
             <p class="text-titleColor font-semibold tracking-tight">Useful links:</p>
-            <ul class="text-textColor hover:child:cursor-pointer hover:child:brightness-125 hover:child:transition-all">
+            <ul class="text-textColor hover:child:cursor-pointer hover:child:brightness-125 hover:child:transition-all flex flex-col md:items-start items-center">
                 <p @click="scrollTo('about')">About</p>
                 <p @click="scrollTo('projects')">Projects</p>
                 <p @click="scrollTo('contact')">Contact</p>
