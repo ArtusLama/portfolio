@@ -16,7 +16,7 @@
 
         </div>
         <div class="grid items-center">
-            <p class="text-textColor md:text-[15rem] -mt-10 text-[10rem] md:ml-0 -ml-20">🫡</p><!--TODO: change xD looks on ios weird-->
+            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Grinning%20Face.png" alt="Grinning Face" />
         </div>
     </div>
 </template>
