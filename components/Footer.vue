@@ -5,7 +5,7 @@
         <div class="md:max-w-[25%] max-w-[50%] flex flex-col md:items-start items-center">
             <p class="text-primary font-bold text-3xl">{{ "< Artus >" }}</p>
             <p class="text-textColor md:text-left text-center">Nothing is as important as passion. No matter what you want to do with your life, be passionate.</p>
-            <p class="text-textColor tracking-tighter text-[15px]">Copyright © 2024</p>
+            <p class="text-textColor tracking-tighter text-[15px] mt-2">Copyright © 2024</p>
         </div>
 
 
