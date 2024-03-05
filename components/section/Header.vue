@@ -5,7 +5,7 @@
         <div>
             <SectionTitle
                 sectionName="Welcome, my name is"
-                title="<p>Arthur Paucke</p>"
+                title="Arthur Paucke"
                 :boldSectionName=true
             />
             <p class="mt-2 text-textColor">I’m a passionate Developer and UI/UX Designer</p>
