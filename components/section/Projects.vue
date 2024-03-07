@@ -14,7 +14,13 @@
                           image-path="images/projects/NumberDecomposition.svg"
                           :tags='["Python"]'
                           github-link="https://github.com/ArtusLama/decomposition-of-a-number/"/>
-
+            
+                          
+            <ProjectsCard title="DNA Nucleotides to Amino Acids"
+                          description="In biologie class we had genetic and I created a tool to translate a DNA sequence to Amino Acids."
+                          image-path="images/projects/DNA_to_AminoAcids.svg"
+                          :tags='["Python"]'
+                          github-link="https://github.com/ArtusLama/BiologieGeneticCodeToAminoAcids/"/>
 
 
 
