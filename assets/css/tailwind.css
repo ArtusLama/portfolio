@@ -32,6 +32,10 @@
         @apply border-none;
         @apply shadow-md shadow-primary/40;
     }
+
+    kbd {
+        @apply border-textColor border-[1px] rounded px-[2px] py-[1px] text-textColor;
+    }
 }
 @layer components {
     .title {

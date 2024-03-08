@@ -4,6 +4,7 @@
         <SectionAbout id="about" class="md:w-[50vw]"/>
         <SectionProjects id="projects" class="md:w-[85vw]"/>
         <SectionContact id="contact" class="md:w-[50vw]"/>
+        <GamesMinesweeperGame/>
     </div>
 </template>
 <script lang="ts" setup>

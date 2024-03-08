@@ -11,6 +11,21 @@ export default {
                 borderColor: "#3C485B",
                 backgroundLightColor: "#151a21",
                 backgroundColor: "#0A0E14"
+            },
+
+            // thanks to https://gist.github.com/krishaantechnology/245b29cfbb25eb456c09fce63673decc
+            animation:{
+                'shake': 'shake 0.1s cubic-bezier(.36,.07,.19,.97) both infinite',
+            },
+            keyframes: {
+                'shake' : {
+                    '10%, 90%': {
+                        transform: 'translate(-1px, 0.5px)'
+                    },
+                    '50%': {
+                        transform: 'translate(1px, -0.5px)'
+                    }
+                }
             }
         }
     },
