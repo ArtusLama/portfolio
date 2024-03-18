@@ -84,7 +84,11 @@
             if (grid.value[x][y] != 0) return;
 
 
-            const checkMatrix: Array<Array<number>> = [[0, -1], [1, 0], [0, 1], [-1, 0]];
+            
+            const checkMatrix: Array<Array<number>> = [[-1, -1], [0, -1],  [1, -1],
+                                                        [-1, 0],            [1, 0],
+                                                        [-1, 1],  [0, 1],   [1, 1]]
+                                                            
             for (let check of checkMatrix) {
 
                 const tx = x + check[0];
