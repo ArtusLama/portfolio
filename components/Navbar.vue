@@ -2,10 +2,10 @@
     <div class="sticky top-0 z-50">
         <div class="bg-backgroundColor/[0.7] flex justify-between items-center px-12 md:px-32 py-2 md:py-6 backdrop-blur md:backdrop-blur-lg relative z-20">
             <div>
-                <p class="text-primary font-bold text-2xl">{{ "< Artus >" }}</p>
+                <p class="text-primary font-bold text-4xl">{{ "< Artus >" }}</p>
             </div>
 
-            <div v-if="currentScreenWidth >= maxMobileWidth" class="flex gap-10 text-textColor font-light text-lg child:cursor-pointer">
+            <div v-if="currentScreenWidth >= maxMobileWidth" class="flex gap-10 text-textColor text-lg child:cursor-pointer child:transition-all child:duration-200">
                 <p @click="scrollTo('home')" class="hover:text-primary">Home</p>
                 <p @click="scrollTo('about')" class="hover:text-primary">About</p>
                 <p @click="scrollTo('projects')" class="hover:text-primary">Projects</p>

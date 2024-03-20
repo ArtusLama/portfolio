@@ -1,6 +1,6 @@
 <template>
 
-    <div ref="element" @click="onCellClick(false)" @contextmenu.prevent="onRightClick()" class="cursor-pointer flex items-center justify-center hover:brightness-90 w-10 h-10 rounded" :class='{ "bg-white": showContent, "bg-primary": !showContent, "!bg-red-500": markedAsBomb && !showContent }'>
+    <div ref="element" @click="onCellClick(false)" @contextmenu.prevent="onRightClick()" class="cursor-pointer flex items-center justify-center hover:brightness-90 md:w-10 md:h-10 w-8 h-8 md:rounded rounded-sm" :class='{ "bg-white": showContent, "bg-primary": !showContent, "!bg-red-500": markedAsBomb && !showContent }'>
         <p v-if="showContent && props.content > 0" class="select-none font-semibold">{{ props.content }}</p>
         <span v-if="showContent && props.content == -1" class="i-heroicons-bug-ant-solid w-5 h-5 text-red-500"></span>
         <span v-if="markedAsBomb && !showContent" class="i-heroicons-flag-solid text-white"></span>
