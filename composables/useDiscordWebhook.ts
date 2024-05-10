@@ -2,10 +2,12 @@ export const useDiscordWebhook = () => {
 
     const baseUrl = "https://discord.com/api/webhooks/"
     const webhook = {
+        // webhook Token can stay because there should be no problem with nuking my dc private channel :D (also theres a rate limit)
         contactMessage: "1210967852484399174/NQiTH4vEf3ob3hqowM5u6ivSiWSLjB0OfrjUyj7C9xDqnX2CXienqg-r_DxBv7uFEmdY"
     }
-    const getIpInfoApiUrl = "https://ipapi.co/json/";
+    //const getIpInfoApiUrl = "https://ipapi.co/json/";
 
+    /*
     const getGoogleMapsCoordinateLink = (lat: number, lon: number) => {
         return "https://www.google.com/maps/search/?api=1&query=" + lat + "," + lon;
     }
@@ -21,7 +23,7 @@ export const useDiscordWebhook = () => {
         }
         
         return "error";
-    }
+    }*/
 
 
     const hexColor = (hex: string) => {
@@ -30,7 +32,8 @@ export const useDiscordWebhook = () => {
 
 
     const getClientInfoEmbend = async () => {
-        const ipInfos = await getIpInfos();
+        return {};
+        /*const ipInfos = await getIpInfos();
         if (ipInfos == "error") {
             return {
                 title: "Couldn't get Infos!",
@@ -62,7 +65,7 @@ export const useDiscordWebhook = () => {
                     inline: true,
                 },
             ]
-        }
+        }*/
     }
 
 
@@ -88,8 +91,9 @@ export const useDiscordWebhook = () => {
 
         try {
             //@ts-ignore
-            data.embeds.push(await getClientInfoEmbend());
+            //data.embeds.push(await getClientInfoEmbend());
         } catch {
+            /*
             try {
                 const r = await fetch("https://httpbin.org/ip");
                 const json = await r.json();
@@ -100,7 +104,7 @@ export const useDiscordWebhook = () => {
                 });
             } catch (e) {
                 console.log(e);
-            }
+            }*/
         }
         
 
